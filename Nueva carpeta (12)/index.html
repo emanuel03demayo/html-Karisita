@@ -1,0 +1,1523 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Karina ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Pacifico&family=Great+Vibes&family=Sacramento&family=Playfair+Display:ital,wght@0,700;1,700&family=Caveat:wght@600;700&family=Allura&family=Parisienne&family=Lobster&family=Amatic+SC:wght@400;700&family=Satisfy&family=Cookie&family=Bebas+Neue&family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: radial-gradient(ellipse at center, #350817, #10040b 65%, #050205);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fondo {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    background:
+        radial-gradient(circle at 15% 20%, #ff174422, transparent 30%),
+        radial-gradient(circle at 85% 80%, #ff174422, transparent 35%);
+}
+
+.luz {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    background: #ff1744;
+    filter: blur(140px);
+    opacity: .13;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -2;
+    animation: luz 8s ease-in-out infinite alternate;
+}
+
+.luz.uno {
+    top: 5%;
+    left: -100px;
+}
+
+.luz.dos {
+    bottom: 5%;
+    right: -100px;
+}
+
+@keyframes luz {
+    from { transform: translateY(-30px); }
+    to { transform: translateY(60px); }
+}
+
+/* CONTENEDOR */
+
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 20px;
+    position: relative;
+    z-index: 3;
+}
+
+/* FOTOGRAFIA */
+
+.marco-floral {
+    width: 270px;
+    height: 270px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    isolation: isolate;
+    flex-shrink: 0;
+}
+
+.marco-floral::before {
+    content: "";
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    border: 2px solid #ff1744;
+    box-shadow: 0 0 15px #ff1744,
+                0 0 35px #ff174477,
+                0 0 65px #ff174444;
+    z-index: -1;
+    animation: resplandor 3s ease-in-out infinite;
+}
+
+@keyframes resplandor {
+    0%,100% {
+        box-shadow: 0 0 15px #ff1744, 0 0 35px #ff174477;
+    }
+    50% {
+        box-shadow: 0 0 25px #ff1744, 0 0 60px #ff174499;
+    }
+}
+
+.foto-karina {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff6680;
+    box-shadow: 0 0 20px #ff1744aa;
+    z-index: 2;
+    animation: fotoFlotante 4s ease-in-out infinite;
+}
+
+@keyframes fotoFlotante {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* FLORES */
+
+.flor-posicion {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.flor-posicion span {
+    display: block;
+    font-size: 29px;
+    filter: drop-shadow(0 0 6px #ff1744);
+    animation: florBrillo 2.5s ease-in-out infinite;
+}
+
+.flor-posicion:nth-child(even) span {
+    animation-delay: .8s;
+}
+
+@keyframes florBrillo {
+    0%,100% { transform: scale(.9) rotate(-8deg); }
+    50% { transform: scale(1.15) rotate(8deg); }
+}
+
+/* NOMBRE: 15 TIPOGRAFIAS */
+
+.nombre-contenedor {
+    position: relative;
+    width: min(100%,620px);
+    height: 120px;
+    min-height: 120px;
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+#nombreKarina {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(3.4rem,10vw,6rem);
+    line-height: 1;
+    white-space: nowrap;
+    color: #ff355d;
+    text-shadow: 0 0 10px #ff1744, 0 0 30px #ff174477;
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+#nombreKarina.cambiando {
+    opacity: 0;
+    transform: scale(.94);
+}
+
+.corazon-nombre {
+    position: absolute;
+    right: 0;
+    font-size: 38px;
+    color: #ff1744;
+    text-shadow: 0 0 20px #ff1744;
+    animation: latido 1.4s infinite;
+}
+
+@keyframes latido {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+.subtitulo {
+    color: #ffc0cb;
+    margin: 15px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.corazon-central {
+    font-size: 48px;
+    color: #ff1744;
+    margin: 15px;
+    animation: latido 1.4s infinite;
+    text-shadow: 0 0 20px #ff1744;
+}
+
+/* BOTONES */
+
+button {
+    padding: 15px 30px;
+    border: 1px solid #ff6680;
+    border-radius: 40px;
+    background: linear-gradient(45deg,#92001f,#ff1744);
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+    box-shadow: 0 0 20px #ff174433;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px #ff174477;
+}
+
+button:active {
+    transform: scale(.96);
+}
+
+.boton-musica {
+    margin-top: 20px;
+    background: #190b12;
+}
+
+/* CARTA */
+
+.carta {
+    width: 100%;
+    max-width: 650px;
+    margin-top: 30px;
+    padding: 0 25px;
+    border-radius: 25px;
+    border: 1px solid #ff174477;
+    background: rgba(15,5,11,.92);
+    box-shadow: 0 0 35px #ff174422;
+    backdrop-filter: blur(10px);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(25px);
+    transition: opacity 1s ease,
+                transform 1s ease,
+                max-height 1.5s ease,
+                padding 1s ease;
+}
+
+.carta.abierta {
+    max-height: 1100px;
+    padding: 30px 25px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carta h2 {
+    color: #ff6680;
+    font-family: 'Dancing Script',cursive;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.carta p {
+    color: #ffe8ee;
+    line-height: 2;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.firma {
+    font-family: 'Dancing Script',cursive;
+    color: #ff6680;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+/* PETALOS */
+
+.petalo {
+    position: fixed;
+    top: -60px;
+    pointer-events: none;
+    z-index: 1;
+    animation: caerPetalo linear forwards;
+    text-shadow: 0 0 10px #ff1744;
+}
+
+@keyframes caerPetalo {
+    0% {
+        transform: translate(0,-5vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% { opacity: .9; }
+    50% { transform: translate(60px,50vh) rotate(360deg); }
+    100% {
+        transform: translate(-30px,110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* CORAZONES FLOTANTES */
+
+.corazon {
+    position: fixed;
+    bottom: -60px;
+    pointer-events: none;
+    z-index: 1;
+    animation: flotarCorazon linear forwards;
+    text-shadow: 0 0 12px #ff1744;
+}
+
+@keyframes flotarCorazon {
+    0% {
+        transform: translateY(0) scale(.6);
+        opacity: 0;
+    }
+    15% { opacity: .9; }
+    100% {
+        transform: translateY(-115vh) scale(1.4);
+        opacity: 0;
+    }
+}
+
+/* PERSONAJES CAYENDO */
+
+.personaje-cayendo {
+    position: fixed;
+    top: -140px;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 5;
+    filter: drop-shadow(0 0 10px #ff174466);
+    animation: caerPersonaje linear forwards;
+}
+
+@keyframes caerPersonaje {
+    0% {
+        transform: translateY(-10vh) rotate(-15deg);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    50% {
+        transform: translateY(50vh) rotate(15deg) translateX(35px);
+    }
+    100% {
+        transform: translateY(115vh) rotate(360deg) translateX(-35px);
+        opacity: 0;
+    }
+}
+
+/* MENSAJES DE LOS PERSONAJES */
+
+.mensaje-personaje {
+    position: fixed;
+    z-index: 15;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%) scale(.7);
+    width: min(85%,340px);
+    padding: 20px;
+    border: 1px solid #ff6680;
+    border-radius: 20px;
+    background: rgba(25,5,15,.96);
+    box-shadow: 0 0 30px #ff174477;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .35s ease;
+}
+
+.mensaje-personaje.visible {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.mensaje-personaje h3 {
+    color: #ff6680;
+    font-family: 'Dancing Script',cursive;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.mensaje-personaje p {
+    color: #ffe8ee;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* BOTON CANDADO */
+
+.seccion-secreta {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 45px;
+    padding: 25px 15px;
+    border: 1px solid #ff174455;
+    border-radius: 25px;
+    background: rgba(20,5,12,.65);
+    box-shadow: 0 0 25px #ff174422;
+}
+
+.seccion-secreta h2 {
+    font-family: 'Dancing Script',cursive;
+    font-size: 35px;
+    color: #ff6680;
+    margin-bottom: 12px;
+}
+
+.seccion-secreta p {
+    font-size: 13px;
+    color: #ffc0cb;
+    margin-bottom: 20px;
+}
+
+.boton-candado {
+    font-size: 19px;
+    padding: 16px 28px;
+    background: linear-gradient(45deg,#180711,#75001f,#ff1744);
+}
+
+.candado-icono {
+    display: inline-block;
+    animation: latido 1.5s infinite;
+}
+
+/* MENSAJE SECRETO */
+
+.mensaje-secreto {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: max-height 1s ease,
+                opacity .8s ease,
+                transform .8s ease,
+                padding .8s ease;
+    padding: 0 15px;
+    border-radius: 20px;
+    margin-top: 0;
+    background: linear-gradient(145deg,#250711,#480c20);
+    border: 1px solid transparent;
+}
+
+.mensaje-secreto.revelado {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 25px 15px;
+    margin-top: 20px;
+    border-color: #ff6680;
+    box-shadow: 0 0 30px #ff174455;
+}
+
+.mensaje-secreto h3 {
+    font-family: 'Great Vibes',cursive;
+    color: #ff6680;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.mensaje-secreto p {
+    line-height: 1.9;
+    color: #fff0f3;
+    font-size: 14px;
+}
+
+.mensaje-secreto .firma {
+    margin-top: 15px;
+}
+
+/* BIENVENIDA */
+
+.aviso-musica {
+    position: fixed;
+    inset: 0;
+    background: rgba(5,0,4,.97);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
+    transition: opacity .8s ease;
+}
+
+.aviso-musica.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.aviso-musica h2 {
+    font-family: 'Dancing Script',cursive;
+    font-size: clamp(35px,7vw,48px);
+    color: #ff6680;
+    margin-bottom: 15px;
+}
+
+.aviso-musica p {
+    color: #ffc0cb;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 35px;
+    color: #ff668099;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* MOVIL */
+
+@media(max-width:500px) {
+    .marco-floral {
+        transform: scale(.88);
+        margin-bottom: 10px;
+    }
+
+    .nombre-contenedor {
+        height: 105px;
+        min-height: 105px;
+        flex-basis: 105px;
+    }
+
+    #nombreKarina {
+        font-size: clamp(3rem,11vw,4.5rem);
+    }
+
+    .corazon-nombre {
+        right: 0;
+        font-size: 28px;
+    }
+
+    .carta.abierta {
+        padding: 23px 18px;
+    }
+
+    .carta p {
+        font-size: 13px;
+    }
+
+    .personaje-cayendo {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .luz,.foto-karina,.corazon-central,
+    .flor-posicion span {
+        animation-duration: 8s;
+    }
+}
+
+
+/* =================================
+   ADAPTACION A TODOS LOS DISPOSITIVOS
+================================= */
+
+/* Evita desbordamientos y mejora el tacto en pantallas táctiles */
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 280px;
+    min-height: 100svh;
+    min-height: 100dvh;
+    overflow-x: clip;
+}
+
+img, button {
+    max-width: 100%;
+}
+
+button {
+    min-height: 48px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+.personaje-cayendo:focus-visible {
+    outline: 3px solid #ffd1dc;
+    outline-offset: 4px;
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding:
+        max(28px, env(safe-area-inset-top))
+        max(14px, env(safe-area-inset-right))
+        max(28px, env(safe-area-inset-bottom))
+        max(14px, env(safe-area-inset-left));
+    gap: 0;
+}
+
+.marco-floral {
+    width: clamp(205px, 42vw, 270px);
+    height: clamp(205px, 42vw, 270px);
+    margin-bottom: clamp(8px, 2.5vw, 30px);
+}
+
+.marco-floral::before {
+    width: 72%;
+    height: 72%;
+}
+
+.foto-karina {
+    width: 65%;
+    height: 65%;
+}
+
+.flor-posicion span {
+    font-size: clamp(19px, 4.5vw, 29px);
+}
+
+.nombre-contenedor {
+    width: min(100%, 620px);
+    padding-inline: clamp(8px, 3vw, 24px);
+}
+
+#nombreKarina {
+    font-size: clamp(2.6rem, 9vw, 6rem);
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.corazon-nombre {
+    right: 0;
+    font-size: clamp(22px, 5vw, 38px);
+}
+
+.subtitulo {
+    max-width: 42rem;
+    padding-inline: 8px;
+    font-size: clamp(11px, 2.5vw, 14px);
+    line-height: 1.7;
+    letter-spacing: clamp(1px, .35vw, 2px);
+}
+
+.corazon-central {
+    font-size: clamp(35px, 7vw, 48px);
+}
+
+.carta,
+.seccion-secreta {
+    width: min(100%, 650px);
+    overflow-wrap: anywhere;
+}
+
+.carta.abierta {
+    max-height: 1600px;
+}
+
+.carta h2 {
+    font-size: clamp(30px, 7vw, 42px);
+}
+
+.carta p,
+.mensaje-secreto p {
+    font-size: clamp(13px, 2.6vw, 15px);
+    line-height: 1.85;
+}
+
+.seccion-secreta {
+    max-width: 500px;
+    padding: clamp(18px, 4vw, 25px) clamp(12px, 3vw, 20px);
+}
+
+.seccion-secreta h2 {
+    font-size: clamp(29px, 7vw, 35px);
+}
+
+.mensaje-secreto h3 {
+    font-size: clamp(30px, 7vw, 36px);
+}
+
+.mensaje-personaje {
+    width: min(88vw, 360px);
+    max-height: min(75svh, 520px);
+    overflow-y: auto;
+    padding: clamp(16px, 4vw, 22px);
+}
+
+.mensaje-personaje h3 {
+    font-size: clamp(25px, 6vw, 30px);
+}
+
+.mensaje-personaje p {
+    font-size: clamp(13px, 3vw, 15px);
+}
+
+.aviso-musica {
+    padding:
+        max(20px, env(safe-area-inset-top))
+        max(18px, env(safe-area-inset-right))
+        max(20px, env(safe-area-inset-bottom))
+        max(18px, env(safe-area-inset-left));
+}
+
+.aviso-musica p {
+    max-width: 34rem;
+    line-height: 1.7;
+}
+
+footer {
+    line-height: 1.5;
+    padding-bottom: 8px;
+}
+
+/* Celulares compactos */
+@media (max-width: 380px) {
+    .contenedor {
+        padding-inline: 12px;
+    }
+
+    .marco-floral {
+        width: 205px;
+        height: 205px;
+        margin-bottom: 4px;
+    }
+
+    .nombre-contenedor {
+        height: 88px;
+        min-height: 88px;
+        flex-basis: 88px;
+        padding-inline: 4px;
+    }
+
+    #nombreKarina {
+        height: 82px;
+        font-size: clamp(2.45rem, 12vw, 3.1rem);
+    }
+
+    .corazon-nombre {
+        right: -2px;
+        font-size: 21px;
+    }
+
+    .subtitulo {
+        margin: 8px 0;
+    }
+
+    .carta.abierta {
+        padding: 20px 15px;
+    }
+
+    .boton-candado,
+    button {
+        font-size: 13px;
+        padding: 13px 18px;
+    }
+
+    .personaje-cayendo {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Celulares normales y grandes */
+@media (min-width: 381px) and (max-width: 600px) {
+    .nombre-contenedor {
+        height: 100px;
+        min-height: 100px;
+        flex-basis: 100px;
+    }
+
+    #nombreKarina {
+        font-size: clamp(3rem, 11vw, 4.2rem);
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contenedor {
+        padding: 42px 28px;
+    }
+
+    .marco-floral {
+        width: 250px;
+        height: 250px;
+    }
+
+    .nombre-contenedor {
+        height: 120px;
+        min-height: 120px;
+        flex-basis: 120px;
+    }
+
+    #nombreKarina {
+        font-size: clamp(4rem, 8vw, 5.5rem);
+    }
+
+    .carta,
+    .seccion-secreta {
+        width: min(90%, 650px);
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) {
+    .contenedor {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .carta,
+    .seccion-secreta {
+        width: min(100%, 650px);
+    }
+}
+
+/* Móviles en horizontal */
+@media (max-height: 500px) and (orientation: landscape) {
+    .contenedor {
+        justify-content: flex-start;
+        padding-top: 18px;
+        padding-bottom: 24px;
+    }
+
+    .marco-floral {
+        width: 165px;
+        height: 165px;
+        margin-bottom: 0;
+    }
+
+    .nombre-contenedor {
+        height: 78px;
+        min-height: 78px;
+        flex-basis: 78px;
+    }
+
+    #nombreKarina {
+        height: 72px;
+        font-size: clamp(2.6rem, 7vw, 4rem);
+    }
+
+    .corazon-central {
+        margin: 4px;
+        font-size: 32px;
+    }
+
+    .seccion-secreta {
+        margin-top: 24px;
+    }
+}
+
+/* Reduce el trabajo gráfico si el dispositivo lo solicita */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="fondo"></div>
+<div class="luz uno"></div>
+<div class="luz dos"></div>
+
+<!-- BIENVENIDA -->
+
+<div class="aviso-musica" id="avisoMusica">
+
+    <h2>Una sorpresa para Karina ❤️</h2>
+
+    <p>
+        Prepara tu corazón...
+        hay algo especial para ti.
+    </p>
+
+    <button id="iniciar">
+        ❤️ Entrar a mi sorpresa
+    </button>
+
+    <p id="estadoMusica" style="margin-top:20px">
+        Pulsa para descubrir tu sorpresa.
+    </p>
+
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+
+<main class="contenedor">
+
+    <div class="marco-floral" id="marcoFloral">
+
+        <img src="karina.png"
+             alt="Karina"
+             class="foto-karina">
+
+    </div>
+
+    <!-- NOMBRE -->
+
+    <div class="nombre-contenedor">
+
+        <span id="nombreKarina">Karina</span>
+
+        <span class="corazon-nombre">❤️</span>
+
+    </div>
+
+    <p class="subtitulo">
+        Una pequeña sorpresa hecha especialmente para ti...
+    </p>
+
+    <div class="corazon-central">♥</div>
+
+    <!-- DEDICATORIA -->
+
+    <button id="abrir">
+        💌 Abrir mi dedicatoria
+    </button>
+
+    <section class="carta" id="carta">
+
+        <h2>Para ti, Karina...</h2>
+
+        <p>
+            Quiero que sepas que hay personas que llegan
+            a nuestras vidas y hacen que todo tenga un
+            significado diferente.
+        </p>
+
+        <p>
+            A veces no encontramos las palabras exactas
+            para expresar lo que sentimos, pero eso no
+            significa que no existan sentimientos
+            especiales dentro del corazón.
+        </p>
+
+        <p>
+            Hoy quiero regalarte este pequeño detalle,
+            creado pensando en ti, para recordarte lo
+            maravillosa y especial que eres.
+        </p>
+
+        <p>
+            Que nunca te falten motivos para sonreír,
+            personas que te valoren y momentos que
+            hagan latir tu corazón de felicidad.
+        </p>
+
+        <p>
+            Ojalá esta pequeña sorpresa consiga sacarte
+            una sonrisa, porque detrás de cada detalle
+            hay un pensamiento dedicado a ti.
+        </p>
+
+        <div class="firma">
+            Con mucho cariño... ❤️
+        </div>
+
+    </section>
+
+    <!-- NUEVO: MENSAJE SECRETO -->
+
+    <section class="seccion-secreta">
+
+        <h2>Un secreto para ti...</h2>
+
+        <p>
+            Hay algo que todavía no has descubierto.
+            ¿Te atreves a abrirlo?
+        </p>
+
+        <button class="boton-candado" id="abrirSecreto">
+            <span class="candado-icono" id="candadoIcono">🔒</span>
+            <span id="textoCandado">Desbloquear mi secreto</span>
+        </button>
+
+        <div class="mensaje-secreto" id="mensajeSecreto">
+
+            <h3>Mi secreto para ti...</h3>
+
+            <p>
+                Karina, quizás este sea solamente un
+                pequeño detalle en una pantalla, pero
+                detrás de él hay tiempo, dedicación y
+                muchas ganas de sacarte una sonrisa.
+            </p>
+
+            <p>
+                Quiero que recuerdes que eres una persona
+                especial y que mereces cosas bonitas,
+                momentos inolvidables y mucho cariño.
+            </p>
+
+            <div class="firma">
+                Nunca dejes de brillar. ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MUSICA -->
+
+    <button class="boton-musica" id="controlMusica">
+        🎵 Reproducir música
+    </button>
+
+    <footer>
+        HECHO CON AMOR PARA KARINA
+        <br><br>
+        🖤 KUROMI & HELLO KITTY ❤️
+    </footer>
+
+</main>
+
+<!-- MENSAJE DE LOS PERSONAJES -->
+
+<div class="mensaje-personaje" id="mensajePersonaje">
+    <h3 id="tituloPersonaje"></h3>
+    <p id="textoPersonaje"></p>
+</div>
+
+<!-- AUDIO -->
+
+<audio id="audio"
+       src="no-le-tengas-compasion.mp3"
+       autoplay
+       loop
+       preload="auto">
+</audio>
+
+<script>
+
+/* =================================
+   15 TIPOGRAFIAS PARA KARINA
+================================= */
+
+const nombre = document.getElementById("nombreKarina");
+
+const fuentes = [
+    "'Dancing Script', cursive",
+    "'Pacifico', cursive",
+    "'Great Vibes', cursive",
+    "'Sacramento', cursive",
+    "'Playfair Display', serif",
+    "'Caveat', cursive",
+    "'Allura', cursive",
+    "'Parisienne', cursive",
+    "'Poppins', sans-serif",
+    "'Lobster', cursive",
+    "'Amatic SC', cursive",
+    "'Satisfy', cursive",
+    "'Cookie', cursive",
+    "'Bebas Neue', sans-serif",
+    "'Abril Fatface', serif"
+];
+
+let indiceFuente = 0;
+
+document.fonts.ready.then(() => {
+
+    setInterval(() => {
+
+        nombre.classList.add("cambiando");
+
+        setTimeout(() => {
+
+            indiceFuente = (indiceFuente + 1) % fuentes.length;
+
+            nombre.style.fontFamily = fuentes[indiceFuente];
+
+            nombre.classList.remove("cambiando");
+
+        },150);
+
+    },500);
+
+});
+
+
+/* =================================
+   MARCO FLORAL
+================================= */
+
+const marcoFloral = document.getElementById("marcoFloral");
+
+function crearMarcoFloral() {
+
+    const flores = [
+        "🌹","🌸","🌺","🌷",
+        "🌹","🌸","🌺","🌷",
+        "🌹","🌸","🌺","🌷",
+        "🌹","🌸","🌺","🌷"
+    ];
+
+    const radio = 112;
+
+    flores.forEach((flor,i) => {
+
+        const angulo = (i * 360 / flores.length) - 90;
+        const rad = angulo * Math.PI / 180;
+
+        const x = Math.cos(rad) * radio;
+        const y = Math.sin(rad) * radio;
+
+        const elemento = document.createElement("div");
+
+        elemento.className = "flor-posicion";
+        elemento.style.left = `calc(50% + ${x}px)`;
+        elemento.style.top = `calc(50% + ${y}px)`;
+
+        const interior = document.createElement("span");
+        interior.textContent = flor;
+
+        elemento.appendChild(interior);
+        marcoFloral.appendChild(elemento);
+
+    });
+
+}
+
+crearMarcoFloral();
+
+
+/* =================================
+   ELEMENTOS PRINCIPALES
+================================= */
+
+const audio = document.getElementById("audio");
+const aviso = document.getElementById("avisoMusica");
+const iniciar = document.getElementById("iniciar");
+const abrir = document.getElementById("abrir");
+const carta = document.getElementById("carta");
+
+const controlMusica = document.getElementById("controlMusica");
+const estadoMusica = document.getElementById("estadoMusica");
+
+
+/* =================================
+   ENTRADA
+================================= */
+
+function entrarPagina() {
+
+    aviso.classList.add("oculto");
+
+    setTimeout(() => {
+        aviso.style.display = "none";
+    },850);
+
+}
+
+
+/* =================================
+   MUSICA
+================================= */
+
+async function reproducirMusica() {
+
+    try {
+
+        await audio.play();
+
+        controlMusica.textContent = "⏸ Pausar música";
+        estadoMusica.textContent = "Disfruta tu sorpresa ❤️";
+
+        return true;
+
+    } catch(error) {
+
+        controlMusica.textContent = "🎵 Reproducir música";
+        estadoMusica.textContent = "Pulsa para activar la música.";
+
+        return false;
+
+    }
+
+}
+
+window.addEventListener("load", async () => {
+
+    const reproduciendo = await reproducirMusica();
+
+    if(reproduciendo) {
+        entrarPagina();
+    }
+
+});
+
+iniciar.addEventListener("click", async () => {
+
+    await reproducirMusica();
+    entrarPagina();
+
+});
+
+controlMusica.addEventListener("click", () => {
+
+    if(audio.paused) {
+        reproducirMusica();
+    } else {
+        audio.pause();
+        controlMusica.textContent = "🎵 Reproducir música";
+    }
+
+});
+
+
+/* =================================
+   ABRIR DEDICATORIA
+================================= */
+
+abrir.addEventListener("click", () => {
+
+    carta.classList.toggle("abierta");
+
+    if(carta.classList.contains("abierta")) {
+        abrir.textContent = "❤️ Cerrar dedicatoria";
+    } else {
+        abrir.textContent = "💌 Abrir mi dedicatoria";
+    }
+
+});
+
+
+/* =================================
+   MENSAJES INTERACTIVOS
+   KUROMI Y HELLO KITTY
+================================= */
+
+const mensajesPersonajes = {
+
+    kuromi: [
+        "¡Oye Karina! 😈 Aunque parezca malvada, hasta Kuromi sabe que eres muy especial. ❤️",
+        "Kuromi dice que nunca dejes de sonreír. ¡Eres única! 🖤",
+        "¡Un pequeño secreto! Hasta Kuromi se puso romántica pensando en ti. 💜"
+    ],
+
+    kitty: [
+        "¡Hola Karina! 🎀 Espero que hoy tengas un día tan bonito como tu sonrisa. ❤️",
+        "Hello Kitty te manda muchos abrazos y un montón de cariño. 🎀",
+        "Recuerda que eres una persona maravillosa. ¡Nunca lo olvides! 💗"
+    ]
+
+};
+
+const cajaMensaje = document.getElementById("mensajePersonaje");
+const tituloPersonaje = document.getElementById("tituloPersonaje");
+const textoPersonaje = document.getElementById("textoPersonaje");
+
+let temporizadorMensaje;
+
+function mostrarMensaje(tipo) {
+
+    const esKuromi = tipo === "kuromi";
+
+    const mensajes = esKuromi
+        ? mensajesPersonajes.kuromi
+        : mensajesPersonajes.kitty;
+
+    const mensaje = mensajes[
+        Math.floor(Math.random() * mensajes.length)
+    ];
+
+    tituloPersonaje.textContent = esKuromi
+        ? "😈 Kuromi tiene algo que decirte"
+        : "🎀 Hello Kitty te saluda";
+
+    textoPersonaje.textContent = mensaje;
+
+    cajaMensaje.classList.add("visible");
+
+    clearTimeout(temporizadorMensaje);
+
+    temporizadorMensaje = setTimeout(() => {
+        cajaMensaje.classList.remove("visible");
+    },4500);
+
+}
+
+
+/* =================================
+   PERSONAJES CAYENDO E INTERACTIVOS
+================================= */
+
+const personajes = [
+    {archivo:"kuromi.png",tipo:"kuromi"},
+    {archivo:"kitty.png",tipo:"kitty"}
+];
+
+function crearPersonaje() {
+
+    const datos = personajes[
+        Math.floor(Math.random() * personajes.length)
+    ];
+
+    const personaje = document.createElement("img");
+
+    personaje.className = "personaje-cayendo";
+    personaje.src = datos.archivo;
+    personaje.alt = datos.tipo === "kuromi" ? "Kuromi" : "Hello Kitty";
+    personaje.title = "¡Haz clic para recibir un mensaje!";
+
+    const anchoPersonaje = window.innerWidth <= 600 ? 48 + Math.random() * 18 : 55 + Math.random() * 35;
+    personaje.style.width = anchoPersonaje + "px";
+    personaje.style.height = anchoPersonaje + "px";
+    personaje.style.left = Math.random() * Math.max(0, window.innerWidth - anchoPersonaje) + "px";
+
+    personaje.style.animationDuration =
+        (9 + Math.random() * 7) + "s";
+
+    personaje.addEventListener("click", () => {
+
+        mostrarMensaje(datos.tipo);
+
+        // Evitar que el clic provoque acciones no deseadas.
+        personaje.style.pointerEvents = "none";
+
+    });
+
+    personaje.onerror = () => personaje.remove();
+
+    document.body.appendChild(personaje);
+
+    setTimeout(() => personaje.remove(),17000);
+
+}
+
+
+/* =================================
+   MENSAJE SECRETO CON CANDADO
+================================= */
+
+const botonSecreto = document.getElementById("abrirSecreto");
+const mensajeSecreto = document.getElementById("mensajeSecreto");
+const candadoIcono = document.getElementById("candadoIcono");
+const textoCandado = document.getElementById("textoCandado");
+
+let secretoAbierto = false;
+
+botonSecreto.addEventListener("click", () => {
+
+    secretoAbierto = !secretoAbierto;
+
+    if(secretoAbierto) {
+
+        mensajeSecreto.classList.add("revelado");
+
+        candadoIcono.textContent = "🔓";
+        textoCandado.textContent = "Cerrar mi secreto";
+
+        lanzarCorazonesEspeciales();
+
+    } else {
+
+        mensajeSecreto.classList.remove("revelado");
+
+        candadoIcono.textContent = "🔒";
+        textoCandado.textContent = "Desbloquear mi secreto";
+
+    }
+
+});
+
+
+/* =================================
+   PETALOS CAYENDO
+================================= */
+
+function crearPetalo() {
+
+    const petalo = document.createElement("div");
+
+    petalo.className = "petalo";
+
+    const flores = ["🌹","🌸","❣","🌺"];
+
+    petalo.textContent =
+        flores[Math.floor(Math.random() * flores.length)];
+
+    petalo.style.left = Math.random() * 100 + "vw";
+
+    petalo.style.fontSize =
+        (14 + Math.random() * 18) + "px";
+
+    petalo.style.animationDuration =
+        (7 + Math.random() * 6) + "s";
+
+    document.body.appendChild(petalo);
+
+    setTimeout(() => petalo.remove(),14000);
+
+}
+
+
+/* =================================
+   CORAZONES FLOTANDO
+================================= */
+
+function crearCorazon() {
+
+    const corazon = document.createElement("div");
+
+    corazon.className = "corazon";
+
+    corazon.textContent =
+        Math.random() > .5 ? "❤️" : "♥";
+
+    corazon.style.left = Math.random() * 100 + "vw";
+
+    corazon.style.fontSize =
+        (15 + Math.random() * 22) + "px";
+
+    corazon.style.animationDuration =
+        (6 + Math.random() * 6) + "s";
+
+    document.body.appendChild(corazon);
+
+    setTimeout(() => corazon.remove(),13000);
+
+}
+
+
+/* =================================
+   EXPLOSION SUAVE DE CORAZONES
+================================= */
+
+function lanzarCorazonesEspeciales() {
+
+    for(let i = 0; i < 18; i++) {
+
+        setTimeout(() => {
+
+            const corazon = document.createElement("div");
+
+            corazon.className = "corazon";
+            corazon.textContent = "❤️";
+
+            corazon.style.left =
+                (20 + Math.random() * 60) + "vw";
+
+            corazon.style.fontSize =
+                (18 + Math.random() * 25) + "px";
+
+            corazon.style.animationDuration =
+                (4 + Math.random() * 3) + "s";
+
+            document.body.appendChild(corazon);
+
+            setTimeout(() => corazon.remove(),8000);
+
+        },i * 100);
+
+    }
+
+}
+
+
+/* =================================
+   ANIMACIONES CONTINUAS
+================================= */
+
+const esPantallaPequena = window.matchMedia("(max-width: 600px)").matches;
+setInterval(crearPetalo, esPantallaPequena ? 1100 : 650);
+setInterval(crearCorazon, esPantallaPequena ? 1400 : 900);
+setInterval(crearPersonaje, esPantallaPequena ? 2800 : 1800);
+
+
+/* =================================
+   ERROR DE AUDIO
+================================= */
+
+audio.addEventListener("error", () => {
+
+    controlMusica.textContent = "🎵 Revisar archivo de música";
+
+});
+
+</script>
+
+</body>
+</html>
